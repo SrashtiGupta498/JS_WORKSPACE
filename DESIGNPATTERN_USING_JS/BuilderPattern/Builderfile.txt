@@ -1,0 +1,14 @@
+Builder PAttern
+
+Pattern used to create objects made from a bunch of other objects.
+When you want to build an object madeup from other object.
+when you want to creation of these parts to be independent of main object.
+
+Builder pattern aims to “Separate the construction of a complex object from its representation so 
+that the same construction process can create different representations.”
+It is used to construct a complex object step by step and the final step will return the object.
+
+Which type of design pattern is builder pattern?
+Image result for builder design pattern
+Builder pattern builds a complex object using simple objects and using a step by step approach. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object. A Builder class builds the final object step by step.
+
