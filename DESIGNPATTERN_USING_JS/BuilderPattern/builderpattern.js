@@ -1,3 +1,4 @@
+
 function Person( name ,weight , height ,gender)
 {
     this.name=name;
@@ -23,7 +24,7 @@ function PersonBuilder(name , gender)
  
     this.build = function()
     {
-        return new PersonBuilder(this.name , this.weight , this.height,this.gender);
+        return new PersonBuilder(this.name ,this.weight , this.height,this.gender);
     }
 }
 
