@@ -1,0 +1,2 @@
+ The process of wrapping properties and functions within a single unit
+ is known as encapsulation. 
