@@ -1,8 +1,8 @@
-class Process {
-    constructor(state) {
-        this.state = state
-    }
-}
+// class Process {
+//     constructor(state) {
+//         this.state = state
+//     }
+// }
 const Singleton =(function(){
     class ProcessManager {
         constructor() {
@@ -28,3 +28,4 @@ const processManager = Singleton.getProcessManager();
 const processManager2 = Singleton.getProcessManager();
 
 console.log(processManager ===  processManager2)
+/////////////////////////////////////////////////////
