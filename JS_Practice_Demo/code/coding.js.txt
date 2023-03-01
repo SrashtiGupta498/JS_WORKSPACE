@@ -1,0 +1,487 @@
+Ques. Check the type of array.
+
+var arrayList=['a','b','c','d','e'];
+if(Object.prototype.toString.call(arrayList) === '[object Array]')
+{
+    console.log('Array!')
+}
+
+Ques. Private variable 
+
+function func()
+{
+    var p="secretcode";
+    return function(){
+    return p;
+    }
+}
+var getp =func();
+console.log(getp());
+------------
+
+const findVowels = str=>{
+let count =0;
+const a=['a','e','i','o','u'];
+for(let char of str.toLowerCase())
+{
+    if(a.includes(char))
+    {
+        count++
+    }
+}
+    return count;
+}
+console.log(findVowels('Missions'));
+-------------
+Empty an array in js
+----------
+var arr=['a','b','c','d','e','f','g','h','i','j','k']
+var ano =arr;
+ano.length=0;
+console.log(arr);
+
+-------------------------
+function createBase(basenumber)
+{
+    return function(N)
+    {
+    return basenumber+N;
+    }
+}
+var addsix =createBase(5);
+console.log(addsix(2));
+console.log(addsix(6));
+-------------
+
+for(let i=1;i<=100;i++)
+{
+    let f =(i%3==0);
+    let b =i%5==0;
+    console.log(f?(b? 'fizzbuzz':'fizz'):b?'Buzz':i);
+}
+------------
+let str ="Hello Srashti";
+let s="";
+let length = str.length;
+for(let i=length;i>=0;i--)
+{
+    s+=str.charAt(i);
+}
+console.log(s);
+-----------
+factorial
+-----------
+function func( n)
+{
+    
+    if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+
+        return (n*func(n-1));
+    }
+}
+console.log(func(5));
+------------------------
+
+function Person(first , last ,age , eye)
+{
+    this.first = first;
+    this.age = age
+    this.last = last ;
+    this.eye = eye;
+}
+const mychar = new Person("Srashti","Gupta","22","black");
+mychar.name= function()
+{
+    return this.first+"the name is"+ this.last;
+}
+console.log(mychar.name());
+---------------------------------
+All Javascript objects inherit properties and methods from a prototype.
+In the previous chapter we learned how to use an object construtor.
+Data object inherit from Date.prototype
+Array object inherit from Array.prototypt
+Person object inherit from Person.prototype
+function Person(first , last ,age , eye)
+{
+    this.first = first;
+    this.age = age
+    this.last = last ;
+    this.eye = eye;
+}
+Person.prototype.nationality ="Indian";
+const mychar = new Person("Srashti","Gupta","22","black");
+mychar.name= function()
+{
+    return this.first+"the name is"+ this.last+""+"-"+this.nationality;
+}
+console.log(mychar.name());
+---------------
+let txt ="";
+for (const x of [1,2,3,4,5])
+{
+    txt+=x;    
+}
+console.log(txt);
+---------------
+
+function mynum()
+{
+    let n=0;
+    return {
+        next: function()
+        {
+            n+=10;
+            return {value:n,done:false};
+        }
+    };
+}
+const n = mynum();
+console.log(n.next());
+console.log(n.next());
+console.log(n.next());
+------------------------
+const letter = new Set(["a","b","c","d"]);
+let text ="";
+letter.forEach(function(value)
+{
+    text+=value;
+})
+console.log(text);
+------------
+Object as Keys
+Being able to use objects as keys is an impotant map feature.
+
+
+Object.defineProperty(object, property,{value:value})
+//function declaration
+js function are defined with function keyword.
+use function declaration or a function expression.
+
+function funcname(Parameter)
+{
+
+}
+function myfunction(a,b)
+{
+
+}
+const x = function(a,b)
+{
+return a*b;
+}
+---------
+(
+function ()
+{
+let x ="Hello:";
+})();
+--------
+const person={
+    fullName : function()
+    {
+        return this.firstname+""+this.lastname;
+    }
+}
+const person1 ={
+    firstname:"Srashti",
+    lastname:"Gupta"
+}
+console.log(person.fullName.call(person1));
+-------
+call() method takes argument seperately, apply()
+method takes arguments an array
+--------------
+Class 
+Class metod are created with the same syntax as ov=bject valur
+same dsyntax
+class car {
+    constructor(name)
+    {
+        this.name = name;
+    }
+    static hello(x)
+    {
+        return "Hello" + x.name;
+    }
+}
+let mycar = new car("ford");
+console.log(car.hello(mycar));
+console.log(mycar)
+
+------
+let n="";
+for(let i=5;i>0;i--)
+{
+    for(let j=0;j<i;j++)
+    {
+     n+=" "   
+    }
+    for(let k=5;k>i;k--)
+    {
+        n+='* '
+    }
+    n+='\n';
+}
+print(n);
+----------
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		int row = sc.nextInt();
+		int col = 2*row-1;
+		for(int i=0;i<row;i++)
+		{
+		    for(int j=0;j<=col;j++)
+		    {
+		        if(j<(row-i)||j>(row+i))
+		        {
+		            System.out.print(" ");
+		        }
+		        else
+		        {
+		             System.out.print("*");
+		        }
+		        
+		    }
+		   
+		    System.out.println();
+		}
+		
+	}
+}
+
+--------------------------------------
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		int row = sc.nextInt();
+		int col = 2*row;
+		for(int i=1;i<=row;i++)
+		{
+		    for(int j=1;j<col;j++)
+		    {
+		        if((j<=i)||(j>=col-i))
+		        {
+		            System.out.print(" ");
+		        }
+		        else
+		        {
+		             System.out.print("*");
+		        }
+		        
+		    }
+		   
+		    System.out.println();
+		}
+		
+	}
+}
+--------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		int row = sc.nextInt();
+		int col = 2*row;
+		for(int i=5;i>=1;i--)
+		{
+		    for(int j=1;j<col;j++)
+		    {
+		        if((j<=i)||(j>=col-i))
+		        {
+		            System.out.print(" ");
+		        }
+		        else
+		        {
+		             System.out.print("*");
+		        }
+		        
+		    }
+		   
+		    System.out.println();
+		}
+		
+	}
+}
+-----------------------------
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		int row = sc.nextInt();
+		int col = 2*row;
+		for(int i=0;i<=row;i++)
+		{
+		    for(int j=1;j<col;j++)
+		    {
+		        if((j<=row-i)||(j>=row+i))
+		        {
+		            System.out.print("*");
+		        }
+		        else
+		        {
+		             System.out.print(" ");
+		        }
+		        
+		    }
+		   
+		    System.out.println();
+		}
+		
+	}
+}
+----------------------------------
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner sc = new Scanner(System.in);
+		int row = sc.nextInt();
+		int col = 2*row-1;
+		for(int i=0;i<=row;i++)
+		{
+		    for(int j=0;j<col;j++)
+		    {
+		        if((j==row-i)||(j==row+i))
+		        {
+		            System.out.print("*");
+		        }
+		        else
+		        {
+		             System.out.print(" ");
+		        }
+		        
+		    }
+		   
+		    System.out.println();
+		}
+		
+	}
+}
+-------------------------
+let n="";
+let k=1;
+const row =prompt();
+for(let i=0;i<=row;i++)
+{
+    for(let j=0;j<=i;j++)
+    {
+        if(i==j||i==row||j==0)
+        {
+            n+="*";
+        }
+        else
+        {
+            n+=" ";
+        }
+    }
+    n+='\n'
+}
+console.log(n);
+----------------------------
+const a =[1,4,6,7,8,11];
+let max = a[0];
+let sec = Number.MIN_VALUE -1;
+for(let i=1;i<a.length;i++)
+{
+    if(max<a[i])
+    {
+        max =a[i];
+    }
+}
+for(let i=1;i<a.length;i++)
+{
+    if(a[i]!=max && a[i]>sec)
+    {
+        sec = a[i];
+    }
+}
+console.log(sec);
+-----------------
+const a =[1,4,6,7,8,11];
+let min = a[0];
+let sec = Number.MAX_VALUE +1;
+for(let i=1;i<a.length;i++)
+{
+    if(min>a[i])
+    {
+        min =a[i];
+    }
+}
+for(let i=1;i<a.length;i++)
+{
+    if(a[i]!= min && a[i]<sec)
+    {
+        sec = a[i];
+    }
+}
+console.log(sec);
+-------------------
+sum of element
+-------------------
+const a=[2,5,7,9,11,13];
+let sum =0;
+for(let i=0;i<a.length;i++)
+{
+    sum+=a[i];
+}
+console.log(sum);
+-----------------------
+
+const a =[33,2,6,9,76,3];
+a.sort(function (a,b)
+{
+    return b-a
+});
+console.log(a);
+------------------------
+
+
+const a=[4,5,6,7,8,9,3,5]
+const count ={};
+a.forEach(e=>count[e]?count[e]++:count[e] =1)
+console.log(count);
+-----------------
+sort the list
+---------------
+const ar=[2,4,6,8,1,12];
+ar.sort(function fun(a,b)
+{
+    return a-b;
+});
+print(ar);
+---------------
+*******************************************************************************/
+const a=["shreya","srashti","vishal","Tanya"];
+a.sort(function fun(a,b)
+{
+    if(a>b)
+    {
+    return -1;
+    }
+    else
+    {
+        return 1;
+    }
+}

@@ -1,0 +1,93 @@
+Decorator Design Pattern
+
+
+Decorator pattern allows a user to add new functionality to an existing object without altering its structure. This type of design pattern comes under structural pattern
+as this pattern acts as a wrapper to existing class.
+
+This pattern creates a decorator class which wraps the original class and provides additional functionality
+keeping class methods signature intact.
+
+We are demonstrating the use of decorator pattern via following example in which we will decorate a shape with
+ some color without alter shape class
+ 
+ 
+ Usecase
+ 
+ BaseofPizza
+ --->Toppings-->Extracheese-->Mushroom-->Jalepeno
+  
+Basecoffee
+-->DalgenoCoffee-->Espresso
+
+Car
+
+Why you need decorator pattern?
+
+		--------
+		|		|
+		|	Car	|
+		----------
+		Vehicle
+		
+BaseCar+AC--->B.C+AC+PS ---
+
+BasePizza--Cost()--
+Margreeta
+vegdelight
+cart{
+ redazoo
+ }
+			
+			  abstract Topping Decorators---->has-a--->BasePizza--Cost
+										----->Is-a---->Pizza
+			--------------------------
+			
+abstract class BasePizza {
+		
+		public abstract int cost();
+		
+		}
+public abstract class BasePizza{
+
+	public abstract int cost();
+	}
+	
+public class farmhouse extends Basepizza{
+
+@Override
+public int cost(){
+	return 200;
+	}
+	}
+public class VegDelight extends Basepizza{
+
+@Override
+public int cost(){
+	return 200;
+	}
+	}
+public class Margreeta extends Basepizza{
+
+@Override
+public int cost(){
+	return 200;
+	}
+	}
+	
+public abstract class ToppingDecorator extends BasePizza{
+}
+
+public class Extracheese extends ToppingDecorator{
+	BasePizza;
+	
+	public Extracheese(BasePizza pizza){
+	this.basePizza = pizza;
+	}
+	@Override
+	public int cost()
+	{
+		return this.basePizza.cost()+10;
+		}
+		}
+
+
