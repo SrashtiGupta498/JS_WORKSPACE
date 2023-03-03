@@ -23,9 +23,4 @@ class Configuration{
     {
         new Application(this.calender).run();
     }
-
-
-
-
-
-        }
+ }

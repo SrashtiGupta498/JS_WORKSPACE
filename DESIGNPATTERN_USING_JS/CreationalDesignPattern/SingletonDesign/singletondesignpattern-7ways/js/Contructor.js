@@ -14,8 +14,9 @@ class ConstructorSingleton {
 
 new ConstructorSingleton().invoke()
 
+
 /**
  * Proof
  */
 
-new ConstructorSingleton() === new ConstructorSingleton() // => true
+console.log(new ConstructorSingleton() === new ConstructorSingleton()) // => true

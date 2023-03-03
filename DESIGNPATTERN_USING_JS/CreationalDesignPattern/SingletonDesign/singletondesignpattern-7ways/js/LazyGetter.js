@@ -1,6 +1,6 @@
 class LazyGetterSingleton {
-    static _instanceCache
-
+    static _instanceCache;
+    name="xyz";
     static get instance() {
         if (!this._instanceCache) {
             this._instanceCache = new this();

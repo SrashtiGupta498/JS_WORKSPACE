@@ -4,7 +4,9 @@ const singleton=(function(){
     let instance = null;
     function createinstance()
     {
-        return {name:"Rohit",age:91 ,score:Math.floor(Math.random()*10)}
+        return {
+            name:"Rohit",age:91 ,score:Math.floor(Math.random()*10)
+        }
     }
     return {
            getinstance : function(){

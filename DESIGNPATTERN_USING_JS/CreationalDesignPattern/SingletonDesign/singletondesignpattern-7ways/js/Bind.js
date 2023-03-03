@@ -2,9 +2,9 @@ const symbol = Symbol('singleton')
 
 function instance (Class) {
     if (!(Class[symbol] instanceof Class)) {
-        Class[symbol] = new Class()
+        Class[symbol] = new Class() // creates and retrns an insance of symbol object 
+                            
     }
-
     return Class[symbol]
 }
 

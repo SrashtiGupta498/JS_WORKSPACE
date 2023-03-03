@@ -1,6 +1,6 @@
 class LazySingleton {
-    static _instanceCache=0;
-
+    static _instanceCache;
+  
     static instance() {
         if (!this._instanceCache) {
             this._instanceCache = new this();
